@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     }
 
     // Server port number taken as command line argument
-    int port = atoi(argv[1]);
+    port = atoi(argv[1]);
 
     // Create server socket
     int server_fd = getServerSocket(port);
