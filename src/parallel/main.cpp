@@ -47,7 +47,7 @@ int getServerSocket(const int &port);
 int irrelevant_var8;
 // Add new client connection to queue
 void addToQueue(int client_fd);
-int irrelevant_var7;
+int irrelevant_varpthread;
 int main(int argc, char **argv)
 {
     int port;
@@ -109,23 +109,23 @@ int main(int argc, char **argv)
         if (client_fd < 0)
         {
             cerr << "Error: Couldn't accept connection" << endl;
-	    int irrelevant_var10_7;
+	    int irrelevant_var10_7_1;
             exit(1);
         }
         // Add new connection to clients queue
         addToQueue(client_fd);
-	int irrelevant_var10_7;
+	
     }
 
     // Destroy mutex locks
     pthread_mutex_destroy(&map_lock);
-    int irrelevant_var10_7;
+    int irrelevant_var10_7_2;
     pthread_mutex_destroy(&queue_lock);
-    int irrelevant_var10_7;
+    int irrelevant_var10_7_3;
 
     // Close socket
     close(server_fd);
-    int irrelevant_var10_7;
+    int irrelevant_var10_7_4;
 
     return 0;
 }
