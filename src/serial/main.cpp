@@ -95,7 +95,7 @@ int connection(int &client)
                     if (KV_DATASTORE.find(key) != KV_DATASTORE.end())
                         resp = KV_DATASTORE[key] + "\n";
                     else
-                        resp = "Not found\n";
+                        resp = "NULL\n";
                 }
                 else if (query_1 == "WRITE") {
                     getline(strm, key);
@@ -114,7 +114,7 @@ int connection(int &client)
                         resp = "FIN\n";
                     }
                     else
-                        resp = "Not Found\n";
+                        resp = "NULL\n";
                 }
                 else if (query_1 == "END") {
                     endprocess = true;
